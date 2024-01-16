@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 114.132.198.119:8848
+        password: nacos
+  application:
+    name: goods
