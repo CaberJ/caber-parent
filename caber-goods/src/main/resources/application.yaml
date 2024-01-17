@@ -9,3 +9,5 @@ spring:
         password: nacos
   application:
     name: goods
+  profiles:
+    active: caber

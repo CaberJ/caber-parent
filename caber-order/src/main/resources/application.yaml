@@ -10,3 +10,5 @@ spring:
         password: nacos
   application:
     name: order
+  profiles:
+    active: caber

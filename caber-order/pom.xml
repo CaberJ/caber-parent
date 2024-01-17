@@ -9,7 +9,6 @@
     </parent>
     <groupId>cn.caber</groupId>
     <artifactId>caber-order</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
     <name>caber-order</name>
     <description>caber-order</description>
     <dependencies>
@@ -34,6 +33,16 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-loadbalancer</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
 
         <dependency>
