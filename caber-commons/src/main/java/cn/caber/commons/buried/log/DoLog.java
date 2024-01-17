@@ -1,5 +1,6 @@
 package cn.caber.commons.buried.log;
 
+import cn.caber.commons.buried.filter.DefaultLogFilter;
 import cn.caber.commons.buried.filter.LogFilter;
 
 import java.lang.annotation.Documented;
@@ -13,7 +14,7 @@ import java.lang.annotation.Target;
 @Documented
 public @interface DoLog {
 
-    Class<? extends LogFilter> paramLogFilter();
+    Class<? extends LogFilter> paramLogFilter() default DefaultLogFilter.class;
 
-    Class<? extends LogFilter> resultLogFilter();
+    Class<? extends LogFilter> resultLogFilter() default DefaultLogFilter.class;
 }
