@@ -1,13 +1,18 @@
 package cn.caber.cabergoods.controller;
 
-import cn.caber.cabergoods.log.TestLogFilter;
 import cn.caber.cabergoods.po.Param;
 import cn.caber.cabergoods.service.TestService;
-import cn.caber.commons.buried.log.DoLog;
-import com.alibaba.fastjson.JSON;
+import cn.caber.commons.buried.log.BuriedPoint;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -24,7 +29,7 @@ public class TestController {
 
     @PostMapping("/upload")
     @ResponseBody
-    @DoLog
+    @BuriedPoint
     public String handleFileUpload(@RequestParam("name") String name, @RequestPart("file") MultipartFile file) {
         if (!file.isEmpty()) {
 
@@ -44,7 +49,7 @@ public class TestController {
 
     @PostMapping("/upload1")
     @ResponseBody
-    @DoLog
+    @BuriedPoint
     public String handleFileUpload1(@RequestParam("file") MultipartFile file) {
         if (!file.isEmpty()) {
             // 处理文件流，例如保存到磁盘或进行其他操作
@@ -58,14 +63,14 @@ public class TestController {
 
     @PostMapping("/11")
     @ResponseBody
-    @DoLog
+    @BuriedPoint
     public Param param0(@RequestBody Param param) {
         return param;
     }
 
     @GetMapping("/22")
     @ResponseBody
-    @DoLog
+    @BuriedPoint
     public Param param1(@RequestParam("name") String name) {
         Param param = new Param();
         param.setName(name);
@@ -85,6 +90,7 @@ public class TestController {
     @ResponseBody
     public Param param4(@RequestParam("name") String name, @RequestBody Param param) {
         Param res = testService.doService(name, param);
+        int a= 1/0;
         return res;
     }
 

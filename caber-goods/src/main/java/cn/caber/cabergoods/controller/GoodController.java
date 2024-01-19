@@ -1,7 +1,7 @@
 package cn.caber.cabergoods.controller;
 
 import cn.caber.cabergoods.client.OrderClient;
-import cn.caber.commons.buried.log.DoLog;
+import cn.caber.commons.buried.log.BuriedPoint;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class GoodController {
     private OrderClient client;
 
     @RequestMapping("/getGoods")
-    @DoLog
+    @BuriedPoint
     public String getGoods() {
         log.info("请求：getGoods");
         String traceId = MDC.get("traceId");
