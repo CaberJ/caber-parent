@@ -11,13 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class OrderController {
 
+
     @GetMapping("/getOrder")
-    public String getOrder(){
-        MDC.put("traceId", "sdgsadgd2323252523242");
+    public String getOrder() {
         log.info("请求：getOrder");
         return "order";
     }
-
 
 
 }
