@@ -10,10 +10,18 @@ spring:
     gateway:
       routes:
         - id: goods
-          uri: http://localhost:8081
+          uri: lb://goods
           predicates:
             - Path=/goods/**
           filters:
+        - id: order
+          uri: lb://order
+          predicates:
+            - Path=/order/**
+          filters:
+    loadbalancer:
+      cache:
+        enabled: true
 
   application:
     name: gateway
