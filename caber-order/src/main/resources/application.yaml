@@ -1,7 +1,8 @@
 
 server:
-  port: 8082
-
+  port: 8081
+  servlet:
+    context-path: /order
 spring:
   cloud:
     nacos:
@@ -10,5 +11,10 @@ spring:
         password: nacos
   application:
     name: order
-  profiles:
-    active: caber
+  zipkin:
+    base-url: http://localhost:9411/ # 服务端地址
+    sender:
+      type: web                      # 数据传输方式，web 表示以 HTTP 报文的形式向服务端发送数据
+  sleuth:
+    sampler:
+      probability: 1.0

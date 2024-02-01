@@ -19,6 +19,16 @@
 			<artifactId>caber-commons</artifactId>
 			<version>${revision}</version>
 		</dependency>
+		<dependency>
+			<groupId>cn.caber</groupId>
+			<artifactId>caber-feign-client</artifactId>
+			<version>${revision}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
@@ -31,18 +41,10 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<groupId>cn.caber</groupId>
+			<artifactId>react-demo</artifactId>
+			<version>${revision}</version>
 		</dependency>
-
-
-
-<!--
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
--->
 
 		<dependency>
 			<groupId>org.slf4j</groupId>

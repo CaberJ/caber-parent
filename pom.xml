@@ -18,6 +18,9 @@
         <module>caber-order</module>
         <module>caber-goods</module>
         <module>caber-commons</module>
+        <module>react-demo</module>
+        <module>caber-user</module>
+        <module>caber-feign-client</module>
     </modules>
 
     <properties>
@@ -26,6 +29,7 @@
         <springboot.version>2.4.2</springboot.version>
         <spring.cloudalibaba.version>2021.1</spring.cloudalibaba.version>
         <spring.cloud.version>2020.0.1</spring.cloud.version>
+        <spring.cloud.start.version>3.0.1</spring.cloud.start.version>
         <hutool-all.version>5.6.3</hutool-all.version>
         <commons-collections4.version>4.4</commons-collections4.version>
         <hutool-core.version>5.6.3</hutool-core.version>
@@ -50,6 +54,16 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
                 <version>${spring.cloudalibaba.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+                <version>${spring.cloud.start.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-sleuth</artifactId>
+                <version>${spring.cloud.start.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
@@ -141,13 +155,6 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+
 
 </project>

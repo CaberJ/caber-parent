@@ -1,4 +1,5 @@
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   cn.caber.commons.config.ServletFilterConfig,\
-  cn.caber.commons.config.FeignClientConfig
+  cn.caber.commons.config.FeignClientConfig,\
+  cn.caber.commons.config.ThreadPoolConfig
