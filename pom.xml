@@ -21,6 +21,7 @@
         <module>react-demo</module>
         <module>caber-user</module>
         <module>caber-feign-client</module>
+        <module>caber-point</module>
     </modules>
 
     <properties>
